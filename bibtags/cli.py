@@ -2,15 +2,20 @@
 import sys
 import click
 
+from bibtags import cite as bt_cite
 
-@click.command()
+@click.group()
 def main(args=None):
     """Console script for bibtags."""
-    click.echo("Replace this message by putting your code into "
-               "bibtags.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
     return 0
 
+@main.command()
+@click.argument("tags", nargs=-1)
+def cite(tags):
+    """Console script for bibtags."""
+    click.echo("tags: {}".format(tags))
+    click.echo(bt_cite(*tags))
+    return 0
 
 if __name__ == "__main__":
     sys.exit(main())  # pragma: no cover
