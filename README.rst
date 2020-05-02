@@ -26,6 +26,7 @@ tags for bib
 Features
 --------
 
+* cite in latex by tags: keep track of what and why you cite by the semantic reference, not just by individual
 * TODO
 
 Credits
